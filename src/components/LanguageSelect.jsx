@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
 
 export default class LanguageSelect extends Component {
   constructor() {
@@ -6,8 +7,11 @@ export default class LanguageSelect extends Component {
     this.state = {
       checkPT: false,
       checkEN: false,
+      redirectToPT: false,
+      redirectToEN: false,
     }
-    this.checkValidation = this.checkValidation.bind(this)
+    this.checkValidation = this.checkValidation.bind(this);
+    this.redirectFunction = this.redirectFunction.bind(this);
   }
 
   checkValidation = ({target}) => {
@@ -25,10 +29,21 @@ export default class LanguageSelect extends Component {
     }
   }
 
+  redirectFunction = ({target}) => {
+    const bttnId = target.id;
+    if (bttnId === "pt-button") {
+      this.setState({ redirectToPT: true });
+    } if (bttnId === "en-button") {
+      this.setState({ redirectToEN: true });
+    }
+  }
+
   render() {
     const { 
       checkEN,
       checkPT,
+      redirectToEN,
+      redirectToPT,
      } = this.state;
     return (
       <section className="board" id="language-board">
@@ -43,8 +58,10 @@ export default class LanguageSelect extends Component {
           🇺🇸 EN-US
           <input type="radio" id="en" name="language" onChange={ this.checkValidation }/>
         </label>
-        {checkPT ? <button type="submit">Ir para página principal</button> : null}
-        {checkEN ? <button type="submit">Proceed to main page</button> : null}
+        {checkPT ? <button type="submit" id="pt-button" onClick={ this.redirectFunction }>Ir para página principal</button> : null}
+        {checkEN ? <button type="submit" id="en-button" onClick={ this.redirectFunction }>Proceed to main page</button> : null}
+        {redirectToPT ? <Redirect to="/home-pt"/> : null}
+        {redirectToEN ? <Redirect to="/home-en"/> : null}
       </section>
     );
   };
