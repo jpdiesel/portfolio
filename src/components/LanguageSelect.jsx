@@ -60,8 +60,8 @@ export default class LanguageSelect extends Component {
         </label>
         {checkPT ? <button type="submit" id="pt-button" onClick={ this.redirectFunction }>Ir para página principal</button> : null}
         {checkEN ? <button type="submit" id="en-button" onClick={ this.redirectFunction }>Proceed to main page</button> : null}
-        {redirectToPT ? <Redirect to="/home-pt"/> : null}
-        {redirectToEN ? <Redirect to="/home-en"/> : null}
+        {redirectToPT ? <Redirect to="/sobre"/> : null}
+        {redirectToEN ? <Redirect to="/about"/> : null}
       </section>
     );
   };
