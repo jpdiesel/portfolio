@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import HeaderPT from '../components/HeaderPT';
 
 export default class Sobre extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <section>
+        <HeaderPT />
+      </section>
     )
   }
 }
