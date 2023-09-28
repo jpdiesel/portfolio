@@ -6,8 +6,6 @@ import About from './pages/About';
 import Sobre from './pages/Sobre';
 import Projetos from './pages/Projetos';
 import Projects from './pages/Projects';
-import Galeria from './pages/Galeria';
-import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound'
 import './App.css';
 
