@@ -21,8 +21,6 @@ class App extends React.Component {
         <Route path="/sobre" component={ Sobre }/>
         <Route path="/projetos-e-skills" component={ Projetos }/>
         <Route path="/projects-and-skills" component={ Projects }/>
-        <Route path="/galeria" component={ Galeria }/>
-        <Route path="/gallery" component={ Gallery }/>
         <Route exact path="/*" component={ NotFound }/>
       </Switch>
     </BrowserRouter>
