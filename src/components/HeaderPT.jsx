@@ -7,7 +7,6 @@ export default class HomePT extends Component {
       <section>
         <Link to="/sobre">Sobre mim</Link>
         <Link to="/projetos-e-skills">Projetos e skills</Link>
-        <Link to="/galeria">Galeria</Link>
       </section>
     );
   };

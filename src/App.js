@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
-import LanguageSelect from './components/LanguageSelect';
+import LanguageSelect from './pages/LanguageSelect';
 import About from './pages/About';
 import Sobre from './pages/Sobre';
 import Projetos from './pages/Projetos';

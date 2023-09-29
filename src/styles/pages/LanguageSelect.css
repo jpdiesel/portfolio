@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+}
+
+.outside {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.board {
+  left: 50%;
+  top: 120%;
+  margin-left: -200px;
+  /* Metade do valor da Largura */
+  margin-top: -50px;
+  /* Metade da valor da Altura */
+  position: absolute;
+  width: 400px;
+  /* Valor da Largura */
+  height: 100px;
+  /* Valor da Altura */
+  text-align: center;
+}
+
+.pt-title {
+  /* padding-left: 20px; */
+  padding-bottom: 20px;
+}
+
+.en-title {
+  /* padding-left: 10px; */
+  padding-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+  /* margin-left: 15px; */
+}
+
+label {
+  border: solid 2px #e6eaf0;
+  border-radius: 10%;
+  padding: 25px;
+  margin: 5px;
+  transition: linear;
+  transition-duration: 0.1s;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+} 
+
+.en-label:hover {
+  border: solid 2px transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #b22234, #3c3b6e) border-box;
+  /* gradiente feito com a ajuda deste site: https://www.loopnerd.com.br/codigos-css-prontos/como-colocar-borda-gradiente-css/ */
+  cursor: pointer;
+}
+
+.pt-label:hover {
+  border: solid 2px transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #009c3b, #ffdf00) border-box;
+  cursor: pointer;
+}
+
+.space {
+  margin: 25px;
+}
