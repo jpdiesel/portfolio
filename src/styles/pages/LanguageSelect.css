@@ -12,10 +12,10 @@ body {
 .board {
   left: 50%;
   top: 100%;
-  margin-left: -200px;
+  margin-left: -400px;
   margin-top: -50px;
   position: absolute;
-  width: 400px;
+  width: 800px;
   height: 100px;
   text-align: center;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 .title {
-  background-color: white;
+  background: -webkit-linear-gradient(right, #ffdf00,#009c3b ,#3c3b6e, #b22234);
 }
 
 .pt-title {

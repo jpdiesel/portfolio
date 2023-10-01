@@ -50,16 +50,16 @@ export default class LanguageSelect extends Component {
   render() {
     const StylesPT = {
       border: "solid 2px #e6eaf0",
-      backgroundImage: `url(${brazilFlag})`,
+      background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url(${brazilFlag})`,
       backgroundSize: "cover",
-      color: "white",
+      color: "white"
       
     }
     const StylesEN = {
       border: "solid 2px #e6eaf0",
-      backgroundImage: `url(${usaFlag})`,
+      background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url(${usaFlag})`,
       backgroundSize: "cover",
-      color: "white",
+      color: "white"
     }
     const { 
       checkEN,
@@ -74,7 +74,7 @@ export default class LanguageSelect extends Component {
         <section className="board" id="language-board">
           {checkPT ? <p className='pt-title'>ESCOLHA SEU IDIOMA</p> : null }
           {checkEN ? <p className='en-title'>SELECT YOUR LANGUAGE</p> : null}
-          {!checkEN && !checkPT ? <p className='title'>ESCOLHA SEU IDIOMA</p> : null}
+          {!checkEN && !checkPT ? <p className='title'>SELECT YOUR LANGUAGE/SELECIONAR IDIOMA</p> : null}
           <label style={styledInputEN ? StylesEN : null} className='en-label' htmlFor="en">
             <input type="radio" id="en" name="language" onChange={ this.checkValidation }/>
             EN-US
