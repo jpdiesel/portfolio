@@ -1,26 +1,44 @@
 import React, { Component } from 'react';
-import HeaderPT from '../components/HeaderPT';
+import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom';
+import me from '../img/3x4-sbg.png'
+import '../styles/MainPage.css'
 
 export default class Sobre extends Component {
   render() {
     return (
       <div>
         <header className="header">
-          <HeaderPT />
+          <nav className="page-sections">
+            <label htmlFor='switch'>
+              <input id="switch" type="checkbox"></input>
+            </label>
+            <HashLink smooth to="#about">Sobre mim</HashLink>
+            <HashLink smooth to="#projects">Projetos</HashLink>
+            <HashLink smooth to="#skills">Skills</HashLink>
+            <HashLink smooth to="#experience">Experiências</HashLink>
+            <HashLink smooth to="#contact">Contato</HashLink>
+          </nav>
         </header>
-        <h2>Sobre Mim</h2>
-        <article>
-          <p>Me chamo João Pedro Araújo Diesel, nascido em 29/01/2002 em Santa Maria, no estado do Rio Grande do Sul.
-            Desde pequeno, sempre tive interesse por tecnologia, no começo, gostava de utilizar meu computador para jogar, 
-            mas conforme fui amadurecendo, comecei a desenvolver interesse pela funcionalidade dos jogos, por defesa cibernética 
-            e por hacking em geral. No meio de 2021, um amigo meu me apresentou à <Link
-            to={{ pathname: "https://www.betrybe.com/" }} target="_blank" >Trybe</Link> e foi a partir do Desafio Prático que eu 
-            comecei a aprender programação e conforme fui aprendendo, meu interesse aumentou cada vez mais. Hoje não me vejo em nenhuma
-            outra área se não a de programação.
-          </p>
-        </article>
-        <nav>
+        <figure className='profile-container'>
+          JOÃO PEDRO ARAÚJO DIESEL
+          DESENVOLVEDOR WEB PORTFOLIO
+        </figure>
+        <h2 id="about">Sobre Mim</h2>
+          <figure>
+            <img src={me} className="profile-img" alt="Eu"></img>
+          </figure>
+          <article>
+            <p>Me chamo João Pedro Araújo Diesel, nascido em 29/01/2002 em Santa Maria, no estado do Rio Grande do Sul.
+              Desde pequeno, sempre tive interesse por tecnologia, no começo, gostava de utilizar meu computador para jogar, 
+              mas conforme fui amadurecendo, comecei a desenvolver interesse pela funcionalidade dos jogos, por defesa cibernética 
+              e por hacking em geral. No meio de 2021, um amigo meu me apresentou à <Link
+              to={{ pathname: "https://www.betrybe.com/" }} target="_blank" >Trybe</Link> e foi a partir do Desafio Prático que eu 
+              comecei a aprender programação e conforme fui aprendendo, meu interesse aumentou cada vez mais. Hoje não me vejo em nenhuma
+              outra área se não a de programação.
+            </p>
+          </article>
+        <nav id="projects">
           <h2>Meus Projetos</h2>
           <ul>
             <li>
@@ -62,6 +80,84 @@ export default class Sobre extends Component {
               da complexidade do código, já que esses méritos são do TrybeTunes, mas porque foi meu primeiro projeto usando
               REACT. É um gerador de cartas de baralho do jogo Trunfo
             </p>
+          </ul>
+        </nav>
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Javascript</li>
+          </ul>
+          <ul>
+            <li>HTML</li>
+          </ul>
+          <ul>
+            <li>CSS</li>
+          </ul>
+          <ul>
+            <li>React.JS</li>
+          </ul>
+          <ul>
+            <li>Typescript</li>
+          </ul>
+          <ul>
+            <li>MYSQL</li>
+          </ul>
+          <ul>
+            <li>Python</li>
+          </ul>
+          <ul>
+            <li>GIT</li>
+          </ul>
+          <ul>
+            <li>JEST</li>
+          </ul>
+          <ul>
+            <li>Redux</li>
+          </ul>
+          <ul>
+            <li>Node.js</li>
+          </ul>
+        </section>
+        <article id="experience">
+          <h2>Experiências</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices bibendum urna laoreet dictum.
+            Nam ac tristique quam. Proin nec nisl a odio facilisis dignissim. Aliquam erat volutpat. 
+            Nunc nec orci congue, vulputate elit et, consectetur ligula. Vestibulum venenatis elit et dictum suscipit.
+            In hac habitasse platea dictumst. Quisque quis ante arcu. Phasellus est dolor, congue a hendrerit non, interdum et ipsum.
+            Pellentesque vel magna ipsum. Praesent id consequat tellus, vel convallis odio.
+            Sed eleifend diam ut arcu eleifend, nec hendrerit ante ultricies.
+          </p>
+        </article>
+        <nav id="contact">
+          <h2>Contato</h2>
+          <ul>
+            <li>
+              <Link to={{ pathname: "https://criarmeulink.com.br/u/1696646873" }} target='_blank'>
+                E-MAIL
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to={{ pathname: "https://github.com/jpdiesel" }} target='_blank'>
+                GITHUB
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to={{ pathname: "https://www.linkedin.com/in/jp-diesel/"}} target='_blank'>
+                LINKEDIN
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to={{ pathname: "https://www.instagram.com/diz.eu/" }} target='_blank'>
+                INSTAGRAM
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

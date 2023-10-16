@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
-import '../styles/pages/LanguageSelect.css';
+import '../styles/LanguageSelect.css';
 import brazilFlag from '../img/brazilFlag.png';
 import usaFlag from '../img/usaFlag.jpg';
 
@@ -53,8 +53,10 @@ export default class LanguageSelect extends Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url(${brazilFlag})`,
       backgroundSize: "cover",
       color: "white"
-      
+      // escurecimento da bandeira feito com a ajuda da página abaixo
+      // https://linuxhint.com/different-methods-to-darken-background-image-css/#:~:text=To%20darken%20the%20background%20image%2C%20you%20can%20use%20the%20%E2%80%9Cfilter,to%20darken%20the%20background%20image.      
     }
+
     const StylesEN = {
       border: "solid 2px #e6eaf0",
       background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.60)), url(${usaFlag})`,

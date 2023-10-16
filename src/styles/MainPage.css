@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #10273d;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.page-sections {
+  /* justify-content: space-between; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-container {
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.profile-img {
+  margin-left: 40px;
+  width: 200px;
+}

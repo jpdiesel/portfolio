@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import HeaderEN from '../components/HeaderEN';
 import { Link } from 'react-router-dom';
 
 export default class About extends Component {
@@ -7,9 +6,16 @@ export default class About extends Component {
     return (
       <div>
         <header>
-          <HeaderEN />
+          <Link to="/sobre">About me</Link>
+          <Link to="/sobre">Projects</Link>
+          <Link to="/sobre">Skills</Link>
+          <Link to="/sobre">Experience</Link>
+          <Link to="/sobre">Contact</Link>
         </header>
         <h2>About me</h2>
+        <figure>
+          <img src="src\img\3x4.jpg" alt="Me"></img>
+        </figure>
         <article>
           <p>My name is João Pedro Araújo Diesel, born in 29/01/2002 in Santa Maria, in the state of Rio Grande do Sul, in Brazil.
             Since i was little, i've always been interested in technology, in the beginning, i liked to use my computer to play games, 
