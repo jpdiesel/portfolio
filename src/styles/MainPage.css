@@ -10,7 +10,7 @@ header {
   background-color: #10273d;
   /* padding-top: 10px; */
   /* padding-bottom: 20px; */
-  margin-top: 3px;
+  /* margin-top: 3px; */
 }
 
 #switch {
@@ -30,7 +30,7 @@ header {
 }
 
 .links:hover {
-  border: solid 2px #582a66;
+  border: solid 2px #FAFAFA;
   transition-duration: 0.2s;
 }
 
@@ -61,10 +61,14 @@ ul {
   list-style-type: none;
 }
 
-#skills {
+#skills-section {
   display: flex;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
+}
+
+#skills-section ul{
+  padding: 0%;
 }
 
 #contact-bar {
@@ -73,5 +77,57 @@ ul {
 }
 
 .title-text {
+  text-align: center;
+}
+
+.svg {
+  height: 50px;
+}
+
+.skills {
+  height: 40px;
+  border: 2px #10273d solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.skills:hover {
+  cursor: pointer;
+  border: 2px white solid;
+  transition-duration: 0.2s;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+#projects li {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.project-links {
+  border: 2px #10273d solid;
+  padding-top: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+}
+
+.project-links:hover {
+  border: 2px white solid;
+  transition-duration: 0.2s;
+}
+
+.project-links:visited {
+  color: inherit;
+}
+
+#my-projects {
+  margin-bottom: 45px;
+}
+
+.project-name {
   text-align: center;
 }
