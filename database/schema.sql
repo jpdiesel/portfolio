@@ -1,16 +1,15 @@
 CREATE DATABASE meus_projetos;
+USE meus_projetos;
 
-CREATE TABLE projetos (
+CREATE TABLE [IF NOT EXISTS] projetos (
   id integer PRIMARY KEY AUTO_INCREMENT, 
   titulo VARCHAR(255) NOT NULL,
   descricao TEXT NOT NULL,
   ytb_link VARCHAR(100) NOT NULL,
   github_link VARCHAR(100) NOT NULL,
   tecnologias VARCHAR(150) NOT NULL,
-  data_de_realizacao VARCHAR NOT NULL,
-)
-
-https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley
+  data_de_realizacao VARCHAR(50) NOT NULL
+);
 
 INSERT INTO projetos (titulo, descricao, ytb_link, github_link, tecnologias, data_de_realizacao)
 VALUES
