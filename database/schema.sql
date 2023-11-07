@@ -17,5 +17,5 @@ VALUES
 ('Shopping Cart', 'Esse projeto é uma simulação de um site de compras', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/project-shopping-cart', 'Javascript, HTML, CSS', 'Outubro de 2021'),
 ('To Do List', 'Esse projeto é uma lista de tarefas', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/project-to-do-list', 'Javascript, HTML, CSS', 'Setembro de 2021'),
 ('FakeTunes', 'Esse projeto é uma simulação do ITunes', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/project-faketunes', 'Javascript, HTML, CSS, React', 'Novembro de 2021'),
-('Trunfo', 'Esse projoeto é um game card, no estilo trunfo', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/project-trunfo', 'Javascript, HTML, CSS', 'Novembro de 2021'),
-('E-Wallet', 'Esse projeto é uma carteira online', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/currency-wallet', 'Javascript, HTML, CSS', 'Janeiro de 2022');
+('Trunfo', 'Esse projoeto é um game card, no estilo trunfo', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/project-trunfo', 'Javascript, HTML, CSS, React', 'Novembro de 2021'),
+('E-Wallet', 'Esse projeto é uma carteira online', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', 'https://github.com/jpdiesel/currency-wallet', 'Javascript, HTML, CSS, React', 'Janeiro de 2022');
