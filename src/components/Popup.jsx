@@ -1,5 +1,6 @@
 import React from "react";
-import "./Popup.css";
+import "../styles/Popup.css";
+
 export const Popup = ({ text, closePopup }) => {
   return (
     <div className="popup-container">

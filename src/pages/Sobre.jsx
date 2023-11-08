@@ -1,14 +1,48 @@
 import React, { Component } from 'react';
 import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom';
-import me from '../img/3x4-sbg.png'
-import '../styles/MainPage.css'
+import me from '../img/3x4-sbg.png';
+import '../styles/MainPage.css';
+import { Popup } from "../components/Popup.jsx";
+// import { requestProjects } from '../api/app.js';
 
 export default class Sobre extends Component {
+  constructor() {
+    super()
+    this.state = {
+      open: false,
+      projetos: []
+    }
+    this.openPopup = this.openPopup.bind(this);
+    this.closePopup = this.closePopup.bind(this);
+  }
+
+  openPopup = () => {
+    this.setState({
+      open: true
+    });
+  };
+
+  closePopup = () => {
+    this.setState({
+      open: false
+    })
+  };
+
+  componentDidMount() {
+    fetch('http://localhost:8080/')
+    .then((response) => response.json())
+    .then(projects => {
+      this.setState({ projetos: projects });
+    });
+  }
+
   render() {
     const styles = {
       mixBlendMode: 'normal'
     };
+
+  const { open } = this.state
     return (
       <div>
         <header className="header">
@@ -49,70 +83,81 @@ export default class Sobre extends Component {
         <nav>
           <ul id="projects">
             <li>
-              <Link className='project-links' to={{ pathname: "https://github.com/jpdiesel/trybe-project-pixels-art" }} target="_blank">
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
                   <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style={styles}><g transform="scale(5.12,5.12)"><path d="M44,8h-2v-2h-2v-2h-2h-2h-2v2h-2h-2v2v2h-2v2v2v2h-2h-1h-1h-2v-2v-2v-2h-2v-2v-2h-2h-2v-2h-2h-2h-2v2h-2v2h-2h-2v2v21v1h1h1h3v4h4v5h7v5h5h5v-5h7v-5h4v-4h3h1h1v-1v-21v-2zM44,30h-5v4h-4v5h-7v5h-3h-3v-5h-7v-5h-4v-4h-5v-20h2h2v-2h2v-2h2v2h2h2v4h2v2v2v2h2h2h1h1h2h2v-2v-2v-2h2v-4h2h2v-2h2v2h2v2h2h2z"></path></g></g>
                 </svg>
               </Link>
               <p className='project-name'>Pixels Art</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             {/* <p>Esse projeto foi criado usando o HTML, CSS e JS. É um quadro para pintar pixeis e criar a sua própria arte, 
               apesar de ser um 5x5.</p> */}
             <li>
-              <Link className='project-links' to={{ pathname: "https://github.com/jpdiesel/trybe-project-shopping-cart" }} target="_blank">
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
               </Link>
               <p className='project-name'>Shopping Cart</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             {/* <p>Esse projeto foi criado usando HTML, CSS e JS. É uma página de compra que utiliza a API do Mercado Livre, o que tornou
               o processo de criação desse projeto um pouco mais difícil, já que foi minha primeira vez lidando com API.
             </p> */}
             <li>
-              <Link className='project-links' to={{ pathname: "https://github.com/jpdiesel/trybe-project-todo-list" }} target="_blank">
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
                 </svg>
               </Link>
               <p className='project-name'>To Do List</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             {/* <p>Esse projeto foi criado usando HTML, CSS e JS. É uma lista de tarefas.</p> */}
             <li>
-              <Link className='project-links' id="faketunes" to={{ pathname: "https://github.com/jpdiesel/trybe-project-trybetunes" }} target="_blank">
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
                   <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
                 </svg>
               </Link>
               <p className='project-name'>FakeTunes</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             {/* <p>Esse projeto foi criado usando REACT. Esse projeto é facilmente um dos meu favoritos, porque todo requisito era muito
               desafiador e eu tive que trabalhar bastante e quando terminei, estave exausto, mas feliz porque esse projeto me forçou a 
               aprender coisas novas. É uma versão da Trybe do ITunes. 
             </p> */}
             <li>
-              <Link className='project-links' to={{ pathname: "https://github.com/jpdiesel/trybe-project-tryunfo" }} target="_blank">
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
                   <path d="M5  8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"/>
                   <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"/>
                 </svg>
               </Link>
               <p className='project-name'>Trunfo</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             {/* <p>Esse projeto foi criado usando REACT. Particularmente, esse foi o projeto mais difícil que eu fiz, não por causa
               da complexidade do código, já que esses méritos são do TrybeTunes, mas porque foi meu primeiro projeto usando
               REACT. É um gerador de cartas de baralho do jogo Trunfo
             </p> */}
              <li>
-              <Link  className='project-links' to={{ pathname: "https://github.com/jpdiesel/currency-wallet" }} target='_blank'>
+              <Link className='project-links' onClick={() => this.openPopup()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
                   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
                 </svg>
               </Link>
               <p className='project-name'>E-Wallet</p>
+              {open ? <Popup text="Hello there!" closePopup={() => this.closePopup()} /> : null}
             </li>
             <li>
-              
+
+            {/* <div>
+    <button onClick={() => setOpen(true)}> Click to Open Popup</button>
+{open ? <Popup text="Hello there!" closePopup={() => setOpen(false)} /> : null}
+   </div> */}
+
             </li>
           </ul>
         </nav>
@@ -217,8 +262,11 @@ export default class Sobre extends Component {
         </nav>
       </div>
     )
-  }
+  }    
 }
+
+
+
 
 // ***********************************************************************
 // link externo feito com a ajuda do link:
