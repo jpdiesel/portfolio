@@ -14,3 +14,8 @@ export async function getProjects() {
   const [result] = await pool.query("SELECT * FROM projetos");
   return result;
 }
+
+// export async function getProjectById() {
+//   const [result] = await pool.query("SELECT * FROM projetos WHERE id = ?", [id]);
+//   return result;
+// }

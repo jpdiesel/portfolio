@@ -86,7 +86,7 @@ input[type="radio"] {
 REFERENCIA PRA ESSE BOTÃO ABAIXO: 
 https://medium.com/@christianjbolus/how-to-make-a-button-with-a-gradient-border-and-gradient-text-in-html-css-7d495656169 */
 
-button {
+section button {
   z-index: 1;
   padding: 10px;
   border-radius: 15px;
@@ -98,7 +98,7 @@ button {
   transition-delay: 0.2s;
 }
 
-button::before {
+section button::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -111,7 +111,7 @@ button::before {
   transition: 200ms;
 }
 
-button::after {
+section button::after {
   content: attr(value);
   font-size: 16px;
   background-clip: text;
