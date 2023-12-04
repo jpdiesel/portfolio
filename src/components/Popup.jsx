@@ -3,13 +3,36 @@ import { Link } from 'react-router-dom';
 import "../styles/Popup.css";
 
 export default class Popup extends Component {
+  constructor() {
+    super()
+    this.changePopup = this.changePopup.bind(this);
+  }
+
+  changePopup = (action, id) => {
+    const { openPopup, closePopup } = this.props;
+    if (action === "previous") {
+      const previousPopupId = id - 1;
+      // console.log(previousPopupId);
+      closePopup();
+      openPopup(previousPopupId);
+    } else if (action === "next") {
+      const nextPopupId = id + 1;
+      // console.log(nextPopupId);
+      closePopup();
+      openPopup(nextPopupId);
+    }
+  }
+
   render () {
     const rickRoll = "https://www.youtube.com/embed/dQw4w9WgXcQ?si=OTkhZPeUa0AekoUq&autoplay=1"
-    const { project, closePopup } = this.props;
+    const { project, closePopup, projectId } = this.props;
     const techs = project.tecnologias.split(', ');
     const styles = {
       mixBlendMode: 'normal'
     };
+    const previous = '<';
+    const next = '>';
+
     return (
       <div className="popup-container">
        <div className="popup-body">
@@ -19,10 +42,12 @@ export default class Popup extends Component {
           <button className="close-button" onClick={closePopup}>X</button>
         </div>
         <div className="left">
+        { projectId < 2 ? null : <p className="previous" onClick={ () => this.changePopup("previous", projectId) }>{previous}</p>}
           <iframe width="390" height="230" src={rickRoll}></iframe>
           <Link className="github" to={{  pathname: project.github_link }} target="_blank">Ver no Github</Link>
         </div>
         <div className="right">
+          { projectId > 5 ? null : <p className="next" onClick={ () => this.changePopup("next", projectId) }>{next}</p>}
           <p className="description">{project.descricao}</p>
           <div className="techs">
             <p>Tecnologias utilizadas:</p>

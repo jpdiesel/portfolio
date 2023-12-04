@@ -16,6 +16,13 @@ export default class Sobre extends Component {
       openPopup4: false,
       openPopup5: false,
       openPopup6: false,
+      js: true,
+      html: true,
+      css: true,
+      py: true,
+      node: true,
+      ts: true,
+      mysql: true,
       projetos: []
     }
     this.openPopup = this.openPopup.bind(this);
@@ -24,32 +31,32 @@ export default class Sobre extends Component {
 
   openPopup = (id) => {
     switch (id) {
-      case "1":
+      case 1:
         this.setState({
           openPopup1: true
         });
         break;
-      case "2":
+      case 2:
         this.setState({
           openPopup2: true
         });
         break;
-      case "3":
+      case 3:
         this.setState({
           openPopup3: true
         });
         break;
-      case "4":
+      case 4:
         this.setState({
           openPopup4: true
         });
         break;
-      case "5":
+      case 5:
         this.setState({
           openPopup5: true
         });
         break;
-      case "6":
+      case 6:
         this.setState({
           openPopup6: true
         });
@@ -59,32 +66,32 @@ export default class Sobre extends Component {
 
   closePopup = (id) => {
     switch (id) {
-      case "1":
+      case 1:
         this.setState({
           openPopup1: false
         });
         break;
-      case "2":
+      case 2:
         this.setState({
           openPopup2: false
         });
         break;
-      case "3":
+      case 3:
         this.setState({
           openPopup3: false
         });
         break;
-      case "4":
+      case 4:
         this.setState({
           openPopup4: false
         });
         break;
-      case "5":
+      case 5:
         this.setState({
           openPopup5: false
         });
         break;
-      case "6":
+      case 6:
         this.setState({
           openPopup6: false
         });
@@ -128,12 +135,14 @@ export default class Sobre extends Component {
           </nav>
         </header>
         <figure className='profile-container'>
-          <h2 className='name'>
-            JOÃO PEDRO DIESEL
-          </h2>
-          <h3 className='subtext'>
-            DESENVOLVEDOR WEB
-          </h3>
+          <div>
+            <h2 className='name'>
+              JOÃO PEDRO DIESEL
+            </h2>
+            <h3 className='subtext'>
+              DESENVOLVEDOR WEB
+            </h3>
+          </div>
         </figure>
         {/* <h2 className='title-text' id="about">Sobre Mim</h2>
           <figure>
@@ -153,73 +162,73 @@ export default class Sobre extends Component {
         <nav>
           <ul id="projects">
             <li>
-              <Link className='project-links' onClick={() => this.openPopup("1")} >
+              <Link className='project-links' onClick={() => this.openPopup(1)} >
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
                   <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={styles}><g transform="scale(5.12,5.12)"><path d="M44,8h-2v-2h-2v-2h-2h-2h-2v2h-2h-2v2v2h-2v2v2v2h-2h-1h-1h-2v-2v-2v-2h-2v-2v-2h-2h-2v-2h-2h-2h-2v2h-2v2h-2h-2v2v21v1h1h1h3v4h4v5h7v5h5h5v-5h7v-5h4v-4h3h1h1v-1v-21v-2zM44,30h-5v4h-4v5h-7v5h-3h-3v-5h-7v-5h-4v-4h-5v-20h2h2v-2h2v-2h2v2h2h2v4h2v2v2v2h2h2h1h1h2h2v-2v-2v-2h2v-4h2h2v-2h2v2h2v2h2h2z"></path></g></g>
                 </svg>
               </Link>
               <p className='project-name'>Pixels Art</p>   
-              {openPopup1 ? <Popup text="Hello there!" closePopup={() => this.closePopup("1")} project={ projetos[0] }/> : null}
+              {openPopup1 ? <Popup closePopup={() => this.closePopup(1)} projectId={1} project={ projetos[0] } openPopup={ this.openPopup }/> : null}
             </li>
             {/* <p>Esse projeto foi criado usando o HTML, CSS e JS. É um quadro para pintar pixeis e criar a sua própria arte, 
               apesar de ser um 5x5.</p> */}
             <li>
-              <Link className='project-links' onClick={() => this.openPopup("2")}>
+              <Link className='project-links' onClick={() => this.openPopup(2)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
               </Link>
               <p className='project-name'>Shopping Cart</p>
-              { openPopup2 ? <Popup text="Hello there!" closePopup={() => this.closePopup("2") } project={ projetos[1] } /> : null}
+              { openPopup2 ? <Popup closePopup={() => this.closePopup(2) } projectId={2} project={ projetos[1] } openPopup={ this.openPopup }/> : null}
             </li>
             {/* <p>Esse projeto foi criado usando HTML, CSS e JS. É uma página de compra que utiliza a API do Mercado Livre, o que tornou
               o processo de criação desse projeto um pouco mais difícil, já que foi minha primeira vez lidando com API.
             </p> */}
             <li>
-              <Link className='project-links' onClick={() => this.openPopup("3")}>
+              <Link className='project-links' onClick={() => this.openPopup(3)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
                   <path fillRule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
                 </svg>
               </Link>
               <p className='project-name'>To Do List</p>
-              {openPopup3 ? <Popup text="Hello there!" closePopup={() => this.closePopup("3")} project={ projetos[2] } /> : null}
+              {openPopup3 ? <Popup closePopup={() => this.closePopup(3)} projectId={3} project={ projetos[2] } openPopup={ this.openPopup }/> : null}
             </li>
             {/* <p>Esse projeto foi criado usando HTML, CSS e JS. É uma lista de tarefas.</p> */}
             <li>
-              <Link className='project-links' onClick={() => this.openPopup("4")}>
+              <Link className='project-links' onClick={() => this.openPopup(4)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
                   <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
                 </svg>
               </Link>
               <p className='project-name'>FakeTunes</p>
-              {openPopup4 ? <Popup text="Hello there!" closePopup={() => this.closePopup("4")} project={ projetos[3] } /> : null}
+              {openPopup4 ? <Popup closePopup={() => this.closePopup(4)} projectId={4} project={ projetos[3] } openPopup={ this.openPopup }/> : null}
             </li>
             {/* <p>Esse projeto foi criado usando REACT. Esse projeto é facilmente um dos meu favoritos, porque todo requisito era muito
               desafiador e eu tive que trabalhar bastante e quando terminei, estave exausto, mas feliz porque esse projeto me forçou a 
               aprender coisas novas. É uma versão da Trybe do ITunes. 
             </p> */}
             <li>
-              <Link className='project-links' onClick={() => this.openPopup("5")}>
+              <Link className='project-links' onClick={() => this.openPopup(5)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
                   <path d="M5  8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z"/>
                   <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z"/>
                 </svg>
               </Link>
               <p className='project-name'>Trunfo</p>
-              {openPopup5 ? <Popup text="Hello there!" closePopup={() => this.closePopup("5")} project={ projetos[4] } /> : null}
+              {openPopup5 ? <Popup closePopup={() => this.closePopup(5)} projectId={5} project={ projetos[4] } openPopup={ this.openPopup }/> : null}
             </li>
             {/* <p>Esse projeto foi criado usando REACT. Particularmente, esse foi o projeto mais difícil que eu fiz, não por causa
               da complexidade do código, já que esses méritos são do TrybeTunes, mas porque foi meu primeiro projeto usando
               REACT. É um gerador de cartas de baralho do jogo Trunfo
             </p> */}
              <li>
-              <Link className='project-links' onClick={() => this.openPopup("6")}>
+              <Link className='project-links' onClick={() => this.openPopup(6)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
                   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
                 </svg>
               </Link>
               <p className='project-name'>E-Wallet</p>
-              {openPopup6 ? <Popup text="Hello there!" closePopup={() => this.closePopup("6")} project={ projetos[5] } /> : null}
+              {openPopup6 ? <Popup closePopup={() => this.closePopup(6)} projectId={6} project={ projetos[5] } openPopup={ this.openPopup }/> : null}
             </li>
           </ul>
         </nav>
@@ -278,17 +287,21 @@ export default class Sobre extends Component {
             </li>
           </ul>
         </section>
-        <article id="experience">
+        {/* <article id="experience">
           <h2 className='title-text'>Experiências</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices bibendum urna laoreet dictum.
-            Nam ac tristique quam. Proin nec nisl a odio facilisis dignissim. Aliquam erat volutpat. 
-            Nunc nec orci congue, vulputate elit et, consectetur ligula. Vestibulum venenatis elit et dictum suscipit.
-            In hac habitasse platea dictumst. Quisque quis ante arcu. Phasellus est dolor, congue a hendrerit non, interdum et ipsum.
-            Pellentesque vel magna ipsum. Praesent id consequat tellus, vel convallis odio.
-            Sed eleifend diam ut arcu eleifend, nec hendrerit ante ultricies.
-          </p>
-        </article>
+          <ul>
+            <li className='experience-content'>
+              <p>(2022-2023)</p>
+              <p>FREELANCER</p>
+              Em janeiro de 2022 me envolvi no meu primeiro
+              projeto como freelancer que consistia em tornar
+              uma página responsiva e desde então venho
+              trabalhado no desenvolvimento páginas, sendo o
+              último projeto uma landing page para uma
+              empresa de lavagem de sofás. 
+            </li>
+          </ul>
+        </article> */}
         <h2 className='title-text'>Contato</h2>
         <nav id="contact-bar">
           <ul>

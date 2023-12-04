@@ -87,3 +87,25 @@
 .release-date {
   font-size: 14px;
 }
+
+.previous {
+  left: -25px;
+  /* top: 80px; */
+  bottom: 160px;
+  /* right: 1200px; */
+  position: absolute;
+  /* z-index: 1; */
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.next {
+  /* left: 150px; */
+  right: -25px;
+  bottom: 163px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
