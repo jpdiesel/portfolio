@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+  /* padding-top: 10px; */
+  /* padding-bottom: 20px; */
+  /* margin-top: 3px; */
+}
+
+.dark-theme {
+  background-color: #10273d;
+  color: white;
+}
+
+.light-theme {
+  background-color: #FAFAFA;
+  color: #10273d;
+}
+
+#switch {
+  height: 60px;
+  padding: 0;
+}
+
+.links {
+  text-decoration: none;
+  border: solid 2px transparent;
+  padding: 20px;
+  margin: 0px;
+  color: white;
+}
+
+.links:visited {
+  color: inherit;
+}
+
+.links:hover {
+  /* border: solid 2px #FAFAFA; */
+  transition-duration: 0.2s;
+}
+
+.page-sections {
+  /* justify-content: space-between; */
+  display: flex;
+  justify-content: space-around;
+}  
+
+.profile-container {
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  margin-left: 40px;
+  width: 200px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#skills-section ul {
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+#contact-bar ul {
+  display: flex;
+  justify-content: center;
+}
+
+.title-text {
+  text-align: center;
+}
+
+.svg {
+  height: 50px;
+}
+
+.skills {
+  height: 40px;
+  border: 2px transparent;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.skills:hover {
+  cursor:help;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+#projects li {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.project-links {
+  border: 2px transparent solid;
+  padding-top: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+}
+
+#sc:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.2);
+}
+
+.project-links:visited {
+  color: inherit;
+}
+
+#my-projects {
+  margin-bottom: 45px;
+}
+
+.project-name {
+  text-align: center;
+}
+
+.experience-content {
+  text-align: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a9a9a9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #10273d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #10273d;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
