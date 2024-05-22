@@ -15,6 +15,11 @@ export async function getProjects() {
   return result;
 }
 
+export async function getProjectsEN() {
+  const [result] = await pool.query("SELECT * FROM projects");
+  return result;
+}
+
 // export async function getProjectById() {
 //   const [result] = await pool.query("SELECT * FROM projetos WHERE id = ?", [id]);
 //   return result;

@@ -33,7 +33,7 @@ header {
   border: solid 2px transparent;
   padding: 20px;
   margin: 0px;
-  color: white;
+  color: inherit;
 }
 
 .links:visited {
@@ -53,7 +53,7 @@ header {
 
 .profile-container {
   margin: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.gif");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../img/bg.gif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
@@ -71,11 +71,14 @@ ul {
   list-style-type: none;
 }
 
-#skills-section ul {
+/* #skills-section ul {
   display: flex;
   justify-content: center;
-  /* width: 100%; */
-}
+} */
+
+/* #contact-bar {
+  height: 200px;
+} */
 
 #contact-bar ul {
   display: flex;
@@ -87,7 +90,7 @@ ul {
 }
 
 .svg {
-  height: 50px;
+  height: 40px;
 }
 
 .skills {
@@ -104,6 +107,26 @@ ul {
 #projects {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.upper-row {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.lower-row {
+  display: flex;
+  margin-top: 25px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #projects li {
@@ -112,11 +135,17 @@ ul {
 }
 
 .project-links {
+  cursor: pointer;
   border: 2px transparent solid;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
+}
+
+.sofa {
+  width: 80px;
+  height: 80px;
 }
 
 #sc:hover {
