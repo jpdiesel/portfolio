@@ -71,6 +71,25 @@ ul {
   list-style-type: none;
 }
 
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  text-align: center;
+}
+
+.curriculo {
+  display: flex;
+  color: inherit;
+  text-decoration:underline;
+  text-align: center;
+  margin-left: 230px;
+}
+
+.curriculo:visited {
+  color: white;
+}
+
 /* #skills-section ul {
   display: flex;
   justify-content: center;

@@ -46,6 +46,7 @@ export default class Popup extends Component {
 
   render () {
     const { project, closePopup, projectId, theme, svg } = this.props;
+    console.log(project.tecnologias)
     const techs = project.tecnologias.split(', ');
     const styles = {
       mixBlendMode: 'normal'
