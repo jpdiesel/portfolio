@@ -14,7 +14,7 @@ export default class About extends Component {
         </header>
         <h2>About me</h2>
         <figure>
-          <img src="src\img\3x4.jpg" alt="Me"></img>
+          <img src="src/img/3x4.jpg" alt="Me"></img>
         </figure>
         <article>
           <p>My name is João Pedro Araújo Diesel, born in 29/01/2002 in Santa Maria, in the state of Rio Grande do Sul, in Brazil.
