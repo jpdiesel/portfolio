@@ -1,6 +1,9 @@
 import express from 'express';
 import { getProjects, getProjectsEN } from './database.js';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
@@ -23,6 +26,8 @@ app.use((err, _req, res, _next) => {
   res.status(500).send('Deu ruim =/');
 });
 
-app.listen(8181, () => {
-  console.log('Server is running on port 8181')
+const port = process.env.PORT || 8181;
+
+app.listen(port, async () => {
+  console.log('Server is running on port ' + port)
 });
