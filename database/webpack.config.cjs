@@ -4,7 +4,7 @@ const nodeExternals = require('webpack-node-externals');
 module.exports = {
   mode: 'production',
   entry: {
-    app: './App.js'
+    app: './app.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
