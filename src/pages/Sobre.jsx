@@ -55,7 +55,7 @@ export default class Sobre extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8181/projetos')
+    fetch('http://localhost:3306/projetos')
     .then((response) => response.json())
     .then(data => {
       this.setState({ projetos: data });
