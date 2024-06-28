@@ -55,7 +55,7 @@ export default class Sobre extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8181/projects')
+    fetch('https://portfolio-zeta-liart-67.vercel.app/projects')
     .then((response) => response.json())
     .then(data => {
       this.setState({ projetos: data });
