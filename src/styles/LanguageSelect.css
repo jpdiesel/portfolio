@@ -3,6 +3,10 @@ body {
   background-color: #10273d;
 }
 
+.mvp {
+  font-size: x-small ;
+}
+
 .outside {
   position: relative;
   width: 100%;
@@ -152,4 +156,36 @@ section button::after {
   /* -webkit-background-clip: text; */
   color: white;
 	-webkit-text-fill-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    
+  } */
+
+  .board p{
+    /* width: 80%; */
+    left: 50%;
+  
+    top: 50%;
+    font-size: 15px;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  /* .board p {
+    font-size: 24px;
+  }
+
+  .title, .pt-title, .en-title {
+    background: none;
+  }
+
+  section label {
+    padding: 15px;
+    font-size: 14px;
+  } */
+
+  /* section button {
+    padding: 8px;
+  } */
 }

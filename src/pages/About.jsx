@@ -101,7 +101,7 @@ export default class Sobre extends Component {
         <figure className='profile-container'>
         <div className='main-card-container'>
             <img src={require("../img/mainpagetextEN.gif")} alt="GIF"/>
-            <a className="curriculo" href="../img/jpdieselcv.pdf" download="jpdieselcv.pdf">DOWNLOAD CV</a>
+            <a className="curriculo" href="../img/englishCv.pdf" download="jpdieselcv.pdf">DOWNLOAD CV</a>
             {/* <a>BAIXAR CURRÍCULO</a> */}
           </div>
         </figure>
