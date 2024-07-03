@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import "../styles/Popup.css";
 
@@ -45,8 +46,14 @@ export default class Popup extends Component {
   }
 
   render () {
+    const language = window.location.pathname;
     const { project, closePopup, projectId, theme, svg } = this.props;
-    console.log(project.tecnologias)
+    if (project === undefined && language === "/sobre") {
+      return <Redirect to="/sobre" />
+    } else if (project === undefined && language === "/sobre") {
+      return <Redirect to="/about" />
+    }
+    // console.log(project.tecnologias)
     const techs = project.tecnologias.split(', ');
     const styles = {
       mixBlendMode: 'normal'
