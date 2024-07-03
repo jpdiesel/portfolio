@@ -123,3 +123,37 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .popup-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-body {
+    display: flex;
+    flex-direction: column;
+    left: 7%;
+    width: 370px;
+  }
+
+  iframe {
+    width: 300px;
+    height: 180px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 15px;
+  }
+
+  .previous {
+    bottom: 280px;
+  }
+
+  .next {
+    bottom: 280px;
+  }
+}
