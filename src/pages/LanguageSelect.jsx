@@ -73,7 +73,6 @@ export default class LanguageSelect extends Component {
      } = this.state;
     return (
       <div className="outside">
-        <p className='mvp'>*este site é apenas um MVP, os bugs serão corrigidos ao longo do tempo. Para acessar aos projetos basta clicar, voltar a URL para '/' que eles carregarão normalmente.</p>
         <section className="board" id="language-board">
           {checkPT ? <p className='pt-title'>ESCOLHA SEU IDIOMA</p> : null }
           {checkEN ? <p className='en-title'>SELECT YOUR LANGUAGE</p> : null}
