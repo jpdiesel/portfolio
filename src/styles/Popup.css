@@ -74,6 +74,11 @@
   text-align: center;
 }
 
+iframe {
+  width: 200%;
+  height: 50vh;
+}
+
 .github {
   text-decoration: none;
   margin-top: 20px;
@@ -103,11 +108,8 @@
 .previous {
   color:white;
   left: -25px;
-  /* top: 80px; */
-  bottom: 160px;
-  /* right: 1200px; */
+  bottom: 50%;
   position: absolute;
-  /* z-index: 1; */
   cursor: pointer;
   font-size: 22px;
   font-weight: 500;
@@ -115,11 +117,93 @@
 
 .next {
   color:white;
-  /* left: 150px; */
   right: -25px;
-  bottom: 163px;
+  bottom: 50%;
   position: absolute;
   font-size: 22px;
   font-weight: 500;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+  .popup-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .popup-body {
+    display: flex;
+    flex-direction: column;
+    /* left: 7%; */
+    width: 70%;
+    height: 84%;
+    /* padding-right: 3vh; */
+  }
+
+  iframe {
+    margin-left: 2vh;
+    width: 87%;
+    height: 30vh;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 15px;
+  }
+
+  .left {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .previous {
+    bottom: 50%;
+    padding: 5px;
+  }
+
+  .next {
+    bottom: 50%;
+    padding: 5px;
+  }
+
+  .github {
+    font-size: 13px;
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .techs {
+    font-size: 13px;
+  }
+
+  .popup-svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .release-date {
+    font-size: 11px;
+  }
+}
+
+/* @media screen and (min-height: 620px) {
+  .popup-body {
+    width: 87%;
+    height: 80%;
+  }
+}
+
+@media screen and (min-height: 100px) {
+  .popup-body {
+    width: 87%;
+    height: 70%;
+  }
+} */
